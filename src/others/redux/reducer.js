@@ -39,4 +39,5 @@ const getVisibileTodos = (todos, filter) => {
             return todos
     }
 }
+const mapStateToProps = state => ({todos: getVisibileTodos(state.todos, state.VisibilityFilters)})
 export const todoApp = combineReducers(filterReducer,todosReducer)

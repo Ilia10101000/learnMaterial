@@ -1,15 +1,14 @@
 import React from "react";
-import TodoList from "./TodoList";
-import Footer from "./Footer";
+import CashComponent from "./CashComponent";
+import CustomersComponent from "./CustomersComponent";
 
 
-export default function App() {
-
+export default function App(){
+  
   return (
-
     <div className="app-container">
-      <TodoList/>
-      <Footer/>
+      <CashComponent/>
+      <CustomersComponent/>
     </div>
   );
 }
