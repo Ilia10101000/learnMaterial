@@ -6,22 +6,61 @@
 }
 .app-container{
   display:flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+.customers-component-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .customer-container{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
   gap:10px;
 }
 .customers-list-container{
   display: flex;
   flex-direction: column;
   gap:20px;
-  box-shadow: 1px 1px 1px 4px #8c8c8c;
+  box-shadow: 1px 1px 1px 1px #8c8c8c;
 }
 .delete_icon{
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  transition: .3s;
   border: 1px solid red;
+}
+.delete_icon:hover{
+  background-color: red;
+}
+.cash-component-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.button-cash{
+  outline: none;
+  border: none;
+  background: #00a6ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.buttons-container{
+  display: flex;
+  gap:5px
+}
+.fetch-button{
+  outline: none;
+  border: none;
+  background: red;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer
 }
