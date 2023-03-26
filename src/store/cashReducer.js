@@ -1,19 +1,18 @@
-const initialState = {
-    cash:0
-}
+import { createSlice } from "@reduxjs/toolkit";
 
-const ADD_CASH = 'ADD_CASH';
-const GET_CASH = 'GET_CASH';
-export const cashReducer = (state = initialState, action) => {
-    switch(action.type){
-        case ADD_CASH:
-            return {...state, cash: state.cash + action.payload};
-        case GET_CASH:
-            return {...state, cash: state.cash - action.payload};
-        default:
-            return state;
+const cashSlice = createSlice({
+    name: 'cash',
+    initialState:{
+        cash:0
+    },
+    reducers: {
+        add_cash(state, action){
+            state.cash = state.cash + action.payload
+        },
+        get_cash(state, action){
+            state.cash = state.cash - action.payload
+        }
     }
-}
-
-export const add_cash = (payload) => ({type: ADD_CASH, payload});
-export const get_cash = (payload) => ({type: GET_CASH, payload});
+})
+export const {add_cash, get_cash} = cashSlice.actions
+export const cashReducer = cashSlice.reducer
